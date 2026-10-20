@@ -8,7 +8,7 @@ data "aws_availability_zones" "available" {
     values = ["opt-in-not-required"]
   }
 }
-
+# its available in 3 availablity zones to improve resilience if one fail other continue serving applications.
 locals {
   azs = slice(data.aws_availability_zones.available.names, 0, 3)
 }

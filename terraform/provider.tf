@@ -17,7 +17,7 @@ terraform {
   #   encrypt        = true
   # }
 }
-
+# inside aws provider which region to use
 provider "aws" {
   region = var.aws_region
 
